@@ -19,3 +19,19 @@ const users = [
   { id: '8', name: 'Simon Peterson', age: 30 },
   { id: '9', name: 'Daniel Cane', age: 51 },
 ];
+
+console.groupCollapsed('Amžiaus vidurkis')
+function getUserAverageAge(users) {
+  const vidurkis = users.reduce((sum, user) => sum + user.age, 0);
+  return vidurkis / users.length;
+}
+console.log(getUserAverageAge(users));
+console.groupEnd();
+
+
+console.groupCollapsed('Vardynas')
+function getUsersNames(users) {
+  return users.map(user => user.name);
+}
+console.log(getUsersNames(users)); 
+console.groupEnd();
