@@ -13,6 +13,5 @@ clickMe.addEventListener("click", clickMePlus);
 
 function clickMePlus() {
   count++; 
-
   countElement.innerHTML = count;
 }
