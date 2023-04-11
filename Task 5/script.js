@@ -19,3 +19,21 @@ const users = [
   { id: '8', name: 'Simon Peterson', age: 30, hasDog: false },
   { id: '9', name: 'Daniel Cane', age: 51, hasDog: true },
 ];
+
+console.groupCollapsed('Turi šunį')
+function filterDogOwners(users) {
+  const dogOwners = users.filter(user => user.hasDog);
+  return dogOwners;
+}
+console.log(filterDogOwners(users));
+console.groupEnd();
+
+
+console.groupCollapsed('Pilnamečiai')
+function filterAdults(users) {
+  const adults = users.filter(user => user.age >= 18);
+  return adults;
+}
+console.log(filterAdults(users));
+console.groupEnd();
+
